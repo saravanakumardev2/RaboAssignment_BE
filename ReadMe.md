@@ -10,13 +10,24 @@
 
 * Version 1.0
 
+### Run Application in local mode ###
 
-*Clone through git 
-*Maven update the project and run as spring boot application
+* Clone this repository 
+* Run the below command in terminal or right click the project and click the Run as -> maven clean and maven install 
+``` 
+`mvn clean install`. 
+```
+* Run as springboot application
+
 ```
 Request Url for this application : `http://localhost:8080/api/rest/v1/statement/process`. 
+```
+
+### SWAGGER UI ###
 
 Swagger Url for this application : `http://localhost:8080/swagger-ui.html`.
+
+### POSTMAN TESTING ###
 
 we can test this application through postman tool also:
 
@@ -29,6 +40,16 @@ steps to access this application through postman:
 
 You may also package the application in the form of a jar and then run the jar file like so -
 
+### Build Appliation ###
 ```bash
 mvn clean package
 java -jar target/CustomerStatementProcessor-1.0.0-SNAPSHOT.jar
+```
+
+### Technologies Used ###
+a. Java 1.8
+b. Spring Boot 2.1.4 - REST Microservices
+c. Swagger 2.9.2
+d. Junit 4.13
+e. Apache Common API
+f. Maven
