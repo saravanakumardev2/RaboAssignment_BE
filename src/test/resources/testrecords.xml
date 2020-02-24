@@ -1,0 +1,23 @@
+<records>
+  <record reference="111">
+    <accountNumber>accountNumber1</accountNumber>
+    <description>description1</description>
+    <startBalance>10</startBalance>
+    <mutation>-5</mutation>
+    <endBalance>5</endBalance>
+  </record>
+  <record reference="123">
+    <accountNumber>accountNumber2</accountNumber>
+    <description>description2</description>
+    <startBalance>10.1</startBalance>
+    <mutation>-0.3</mutation>
+    <endBalance>9.8</endBalance>
+  </record>
+  <record reference="111">
+    <accountNumber>accountNumber3</accountNumber>
+    <description>duplicate1</description>
+    <startBalance>15.5</startBalance>
+    <mutation>-5.5</mutation>
+    <endBalance>10.5</endBalance>
+  </record>
+</records>
