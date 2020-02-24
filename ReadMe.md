@@ -25,10 +25,10 @@ steps to access this application through postman:
 2.select the http request type as "POST"
 3.type the url - `http://localhost:8080/api/rest/v1/statement/process`.
 4.select the Body, selct the key as file and select the csv or xml file in the value tab.
-5.type the send button.
+5.press the send button.
 
 You may also package the application in the form of a jar and then run the jar file like so -
 
 ```bash
 mvn clean package
-java -jar target/statements-processor-1.0.0-RELEASE.jar
+java -jar target/CustomerStatementProcessor-1.0.0-SNAPSHOT.jar
