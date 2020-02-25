@@ -7,14 +7,12 @@ import java.io.Reader;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import com.rabobank.customerstatement.constants.ExtentionTypes;
 import com.rabobank.customerstatement.service.Extractor;
 import com.rabobank.customerstatement.service.exceptions.FileExtractorServiceException;

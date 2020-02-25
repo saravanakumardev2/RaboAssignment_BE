@@ -2,7 +2,6 @@ package com.rabobank.customerstatement.service.objects;
 
 
 import java.math.BigDecimal;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -27,7 +26,6 @@ public class Record {
 
 	public Record(int transactionRef, String accountNumber, BigDecimal startBalance, BigDecimal mutation, String description,
 			BigDecimal endBalance) {
-		super();
 		this.transactionRef = transactionRef;
 		this.accountNumber = accountNumber;
 		this.startBalance = startBalance;

@@ -2,6 +2,7 @@ package com.rabobank.statement.service.impls;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
 
+import com.rabobank.customerstatement.service.exceptions.FileExtractorServiceException;
 import com.rabobank.customerstatement.service.impls.CsvFileExtractorService;
 import com.rabobank.customerstatement.service.objects.Record;
 
@@ -58,7 +60,7 @@ public class CsvFileExtractorServiceTest {
 	
 	
 	@Test
-	public void testFileExtractorForCSV() throws Exception{
+	public void testFileExtractorForCSV() throws FileExtractorServiceException, IOException {
 		
 		
 		List<Record> actual=classUnderTest.extractStatements(new ClassPathResource("testrecords.csv").getFile());

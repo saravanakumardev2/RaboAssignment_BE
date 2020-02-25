@@ -1,7 +1,6 @@
 package com.rabobank.customerstatement.service.objects;
 
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -10,7 +9,6 @@ public class Records {
 	}
 
 	public Records(List<Record> record) {
-		super();
 		this.record = record;
 	}
 

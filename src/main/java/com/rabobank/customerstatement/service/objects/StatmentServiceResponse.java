@@ -1,7 +1,6 @@
 package com.rabobank.customerstatement.service.objects;
 
 import java.util.List;
-
 import com.rabobank.customerstatement.constants.ResponseCode;
 
 public class StatmentServiceResponse implements ServiceResponse {

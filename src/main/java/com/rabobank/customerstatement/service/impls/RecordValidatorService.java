@@ -4,9 +4,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.springframework.stereotype.Service;
-
 import com.rabobank.customerstatement.service.Validator;
 import com.rabobank.customerstatement.service.objects.Record;
 
@@ -39,10 +37,7 @@ public class RecordValidatorService implements Validator {
 
 	public boolean isValidBal(BigDecimal startBal,BigDecimal mutationValue,BigDecimal endBal){
 		DecimalFormat df=new DecimalFormat("0.00");
-		String startBalance=df.format(startBal);
-		String mutation=df.format(mutationValue);
-		String endBalance=df.format(endBal);
-		return  new BigDecimal(startBalance).add(new BigDecimal(mutation)).subtract(new BigDecimal(endBalance)).equals(new BigDecimal("0.00"));
+		return  new BigDecimal(df.format(startBal)).add(new BigDecimal(df.format(mutationValue))).subtract(new BigDecimal(df.format(endBal))).equals(new BigDecimal("0.00"));
 	}
 	
 }

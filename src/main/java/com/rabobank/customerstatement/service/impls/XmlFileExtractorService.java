@@ -2,15 +2,12 @@ package com.rabobank.customerstatement.service.impls;
 
 import java.io.File;
 import java.util.List;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import com.rabobank.customerstatement.constants.ExtentionTypes;
 import com.rabobank.customerstatement.service.Extractor;
 import com.rabobank.customerstatement.service.exceptions.FileExtractorServiceException;

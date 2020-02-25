@@ -1,14 +1,12 @@
-package com.rabobank.customerstatement.api.v1;
+package com.rabobank.customerstatement.api.controllers;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
-
 import com.rabobank.customerstatement.api.controllers.v1.objects.ProcessRecordsResponse;
 import com.rabobank.customerstatement.constants.Documentation;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 

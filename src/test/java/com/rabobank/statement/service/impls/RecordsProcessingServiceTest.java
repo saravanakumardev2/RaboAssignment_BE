@@ -124,7 +124,7 @@ public class RecordsProcessingServiceTest {
 	}
 
 	@Test
-	public void testProcessForCSVFileSuccess() throws Exception{
+	public void testProcessForCSVFileSuccess() throws FileExtractorServiceException, RecordsProcessingServiceException {
 		
 		MockMultipartFile multipartFile  = new MockMultipartFile("file", "servicetestrecords.csv",
                 "multipart/form-data", "Spring Framework".getBytes());
@@ -143,7 +143,7 @@ public class RecordsProcessingServiceTest {
 	}
 	
 	@Test
-	public void testProcessForXMLFileSuccess() throws Exception{
+	public void testProcessForXMLFileSuccess() throws FileExtractorServiceException, RecordsProcessingServiceException {
 		
 		MockMultipartFile multipartFile  = new MockMultipartFile("file", "servicetestrecords.xml",
                 "multipart/form-data", "Spring Framework".getBytes());

@@ -1,7 +1,6 @@
 package com.rabobank.customerstatement.service;
 
 import java.util.List;
-
 import com.rabobank.customerstatement.service.objects.Record;
 
 public interface Validator {

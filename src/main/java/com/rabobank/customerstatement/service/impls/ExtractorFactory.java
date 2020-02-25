@@ -1,10 +1,8 @@
 package com.rabobank.customerstatement.service.impls;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import com.rabobank.customerstatement.service.Extractor;
 
 @Component
