@@ -6,9 +6,11 @@ import org.springframework.stereotype.Component;
 import com.rabobank.customerstatement.service.Extractor;
 
 @Component
-public class ExtractorFactory {
+public class ExtractorFactory 
+{
 	@Autowired
 	private List<Extractor> extractorTypes;	
+	
 	public Extractor getExtractorType(String extensionType) {
 		 return extractorTypes.stream().filter(x->x.getExtensionType().getExtention().equalsIgnoreCase(extensionType)).findFirst().orElse(null);
 	}

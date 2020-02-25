@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiOperation;
 
 @RequestMapping(value = "/api/rest/v1/statement/")
 @Api(tags = { "Statement Service Opearations" })
-public interface StatementAPI {
+public interface StatementAPI 
+{
 	@PostMapping(value = "process", produces = MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.MULTIPART_FORM_DATA_VALUE)
 	@ApiOperation(notes=Documentation.STATMENT_PROCESS_CSV_AND_XML_NOTES,consumes=MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE, value = "Statement File Processor")
 	ResponseEntity<ProcessRecordsResponse> process(MultipartFile uploadfile);

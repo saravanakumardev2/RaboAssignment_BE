@@ -4,7 +4,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Records {
+public class Records 
+{
 	public Records() {
 	}
 

@@ -1,10 +1,11 @@
 package com.rabobank.customerstatement.constants;
 
-public enum ResponseCodeDescription implements ResponseCode {
-	
+public enum ResponseCodeDescription implements ResponseCode 
+{
 	INTERNAL_SERVER_ERROR("500", "Process error. Please contact service provider"), 
 	VALIDATION_ERROR("400",	"xml or csv files are only allowed"),
 	SUCCESS("1001","failed records retrieved");
+	
 	private final String code;
 	private final String descrption;
 
