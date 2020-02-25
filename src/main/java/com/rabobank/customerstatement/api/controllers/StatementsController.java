@@ -13,14 +13,20 @@ import com.rabobank.customerstatement.constants.ResponseCodeDescription;
 import com.rabobank.customerstatement.service.exceptions.RecordsProcessingServiceException;
 import com.rabobank.customerstatement.service.impls.RecordsProcessingService;
 import com.rabobank.customerstatement.service.objects.StatmentServiceResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 public class StatementsController implements StatementAPI {
 
 	@Autowired
 	private RecordsProcessingService recordsProcessingService;
+	
+	private static final Logger LOG = LoggerFactory.getLogger(StatementsController.class);
+
 
 	public ResponseEntity<ProcessRecordsResponse> process(@RequestParam("file") MultipartFile multipartFile) {
+		LOG.debug(" File processing starts inside the process method of StatementsController ");
 		ProcessRecordsResponse res = new ProcessRecordsResponse();
 		try {
 			StatmentServiceResponse serviceResponse = recordsProcessingService.process(multipartFile);
@@ -39,6 +45,7 @@ public class StatementsController implements StatementAPI {
 			res.setResponseDesc(ResponseCodeDescription.INTERNAL_SERVER_ERROR.getDescrption());
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(res);
 		}
+		LOG.debug(" File processing ends inside the process method of StatementsController ");
 		return ResponseEntity.status(HttpStatus.OK).body(res);
 	}
 }

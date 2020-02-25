@@ -81,7 +81,7 @@ public class RecordValidatorServiceTest {
 	
 	
 	@Test
-	public void testGetDuplicateRecordsForSucess() throws Exception{
+	public void testGetDuplicateRecordsForSucess() {
 		
 		expectedDuplicateList.add(record1);
 		expectedDuplicateList.add(record3);
@@ -95,7 +95,7 @@ public class RecordValidatorServiceTest {
 	}
 	
 	@Test
-	public void testGetUniqueRecordsForSuccess() throws Exception{
+	public void testGetUniqueRecordsForSuccess() {
 		
 		expectedUniqueList.add(record2);
 		expectedUniqueList.add(record5);
@@ -106,7 +106,7 @@ public class RecordValidatorServiceTest {
 	}
 	
 	@Test
-	public void testValidateBalanceForSucces() throws Exception{
+	public void testValidateBalanceForSucces() {
 		
 		expectedInvalidBalanceRecordList.add(record3);
 		expectedInvalidBalanceRecordList.add(record4);

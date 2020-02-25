@@ -60,7 +60,7 @@ public class RecordsProcessingServiceTest {
 	StatmentServiceResponse expected;
 	
 	@Before
-	public void setup() throws Exception{
+	public void setup() {
 		
 		
 		record1 =new Record();

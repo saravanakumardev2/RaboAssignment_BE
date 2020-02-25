@@ -31,8 +31,7 @@ public class RecordValidatorService implements Validator {
 	}
 	
 	public List<Record> validateBalance(List<Record> customerRecords){
-		List<Record> failedRecords= customerRecords.stream().filter(c->! isValidBal(c.getStartBalance(), c.getMutation(), c.getEndBalance())).collect(Collectors.toList());
-		return failedRecords;
+		return customerRecords.stream().filter(c->! isValidBal(c.getStartBalance(), c.getMutation(), c.getEndBalance())).collect(Collectors.toList());
 	}
 
 	public boolean isValidBal(BigDecimal startBal,BigDecimal mutationValue,BigDecimal endBal){
